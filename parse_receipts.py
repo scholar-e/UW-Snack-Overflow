@@ -470,7 +470,8 @@ def main():
     # Format and save Costco receipts
     if not costco_df.empty:
         costco_formatted = format_dataframe(costco_df)
-        costco_file = 'receipts_costco.csv'
+        costco_file = Path('parsed_receipts/receipts_costco.csv')
+        costco_file.parent.mkdir(exist_ok=True)
         costco_formatted.to_csv(costco_file, index=False)
         print("\n" + "=" * 70)
         print("COSTCO RECEIPTS")
@@ -485,7 +486,8 @@ def main():
     # Format and save Sam's Club receipts
     if not sams_club_df.empty:
         sams_club_formatted = format_dataframe(sams_club_df)
-        sams_club_file = 'receipts_sams_club.csv'
+        sams_club_file = Path('parsed_receipts/receipts_sams_club.csv')
+        sams_club_file.parent.mkdir(exist_ok=True)
         sams_club_formatted.to_csv(sams_club_file, index=False)
         print("\n" + "=" * 70)
         print("SAM'S CLUB RECEIPTS")
