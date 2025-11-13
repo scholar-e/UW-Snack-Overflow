@@ -19,6 +19,12 @@ The transaction data spans from **September 1, 2025 to November 13, 2025** and i
 Install the required Python packages:
 
 ```bash
+pip install -r requirements.txt
+```
+
+Or install individually:
+
+```bash
 pip install pandas matplotlib seaborn numpy
 ```
 
